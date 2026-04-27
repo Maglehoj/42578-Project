@@ -2,11 +2,12 @@ import pandas as pd
 
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
-PATH = DATA_DIR / "ae_2017_2019_full_panel.csv"
-OUTPUT_PATH = DATA_DIR / "ae_2017_2019_analysis_ready.csv"
+OUTPUT_DIR = BASE_DIR.parent
+PATH = OUTPUT_DIR / "ae_2017_2019_full_panel.csv"
+OUTPUT_PATH = OUTPUT_DIR / "ae_2017_2019_analysis_ready.csv"
 
 df = pd.read_csv(PATH)
 
@@ -73,8 +74,6 @@ print(
 
 print(df.groupby("provider_code")["month"].nunique().describe())
 
-
-OUTPUT_PATH = "/Users/elmo/Desktop/BA2/data/ae_2017_2019_analysis_ready.csv"
 
 df.to_csv(OUTPUT_PATH, index=False)
 

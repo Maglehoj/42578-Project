@@ -4,11 +4,12 @@ import os
 
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
+OUTPUT_DIR = BASE_DIR.parent
 DATA_PATH = str(DATA_DIR / "**/*.xls")
-OUTPUT_PATH = DATA_DIR / "ae_2017_2019_full_panel.csv"
+OUTPUT_PATH = OUTPUT_DIR / "ae_2017_2019_full_panel.csv"
 
 month_map = {
     "jan": "01", "feb": "02", "mar": "03",

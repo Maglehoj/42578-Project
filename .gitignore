@@ -5,7 +5,8 @@
 __pycache__/
 *.pyc
 
-# Ignore generated data only
+# Generated CSVs are written outside the repo (BASE_DIR.parent) so git never sees them.
+# This rule catches any strays left inside the repo during development.
 data/*.csv
 
 # Allow Excel source data

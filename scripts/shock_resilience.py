@@ -4,11 +4,12 @@ import matplotlib.pyplot as plt
 
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
-INPUT_PATH = DATA_DIR / "ae_2017_2019_with_shocks.csv"
-OUTPUT_PATH = DATA_DIR / "trust_resilience_scores.csv"
+OUTPUT_DIR = BASE_DIR.parent
+INPUT_PATH = OUTPUT_DIR / "ae_2017_2019_with_shocks.csv"
+OUTPUT_PATH = OUTPUT_DIR / "trust_resilience_scores.csv"
 
 ROLLING_WINDOW = 12
 MIN_PERIODS = 6

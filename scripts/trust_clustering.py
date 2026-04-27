@@ -9,12 +9,13 @@ from sklearn.metrics import silhouette_score
 
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
 
-INPUT_PATH = DATA_DIR / "trust_resilience_scores.csv"
-OUTPUT_PATH = DATA_DIR / "trust_resilience_clusters.csv"
+OUTPUT_DIR = BASE_DIR.parent
+INPUT_PATH = OUTPUT_DIR / "trust_resilience_scores.csv"
+OUTPUT_PATH = OUTPUT_DIR / "trust_resilience_clusters.csv"
 
 N_CLUSTERS = 4
 RANDOM_STATE = 42

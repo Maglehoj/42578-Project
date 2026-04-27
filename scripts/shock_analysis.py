@@ -3,12 +3,13 @@ import matplotlib.pyplot as plt
 
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BASE_DIR / "data"
 
-INPUT_PATH = DATA_DIR / "ae_2017_2019_analysis_ready.csv"
-OUTPUT_DATA_PATH = DATA_DIR / "ae_2017_2019_with_shocks.csv"
-OUTPUT_SUMMARY_PATH = DATA_DIR / "trust_shock_summary.csv"
+OUTPUT_DIR = BASE_DIR.parent
+INPUT_PATH = OUTPUT_DIR / "ae_2017_2019_analysis_ready.csv"
+OUTPUT_DATA_PATH = OUTPUT_DIR / "ae_2017_2019_with_shocks.csv"
+OUTPUT_SUMMARY_PATH = OUTPUT_DIR / "trust_shock_summary.csv"
 
 SHOCK_THRESHOLD = 1.15
 ROLLING_WINDOW = 12
