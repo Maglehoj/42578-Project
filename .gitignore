@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+
+# Ignore generated data only
+data/*.csv
+
+# Allow Excel source data
+!data/**/*.xls
+!data/**/*.xlsx
+
+# Plots
+*.png
+*.pdf
