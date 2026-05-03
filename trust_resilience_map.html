@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_451cbecda02aabb535b8ab4a618f2e5c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<div style="position:fixed;bottom:30px;left:30px;z-index:1000;
+            background:white;padding:10px 14px;border-radius:6px;
+            box-shadow:0 1px 5px rgba(0,0,0,.3);font-size:13px;">
+  <b>Resilience cluster</b><br>
+  <span style="color:#2166AC;">&#9679;</span> Resilient<br>
+  <span style="color:#E08B2C;">&#9679;</span> Moderate<br>
+  <span style="color:#D6404E;">&#9679;</span> Fragile
+</div>
+    
+            <div class="folium-map" id="map_451cbecda02aabb535b8ab4a618f2e5c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_451cbecda02aabb535b8ab4a618f2e5c = L.map(
+                "map_451cbecda02aabb535b8ab4a618f2e5c",
+                {
+                    center: [52.5, -1.5],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1df4df66ff51364b8409826c615fc77e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1df4df66ff51364b8409826c615fc77e.addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            var circle_marker_7308c0c8d6330862a0ce1f32e015691b = L.circleMarker(
+                [53.49, -2.33],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_7308c0c8d6330862a0ce1f32e015691b.bindTooltip(
+                `<div>
+                     <b>Salford Royal NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 100.0<br>Breach impact: -0.0166<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5b77e1aa94bcf99598cb6e6aee831cbc = L.circleMarker(
+                [51.895, 0.897],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_5b77e1aa94bcf99598cb6e6aee831cbc.bindTooltip(
+                `<div>
+                     <b>Colchester Hospital University NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 99.3<br>Breach impact: -0.0154<br>Shocks: 11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_84e5eb216e770814a64a49fc0e2c4b4d = L.circleMarker(
+                [51.572, 0.459],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_84e5eb216e770814a64a49fc0e2c4b4d.bindTooltip(
+                `<div>
+                     <b>Basildon And Thurrock University Hospitals NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 98.6<br>Breach impact: -0.0103<br>Shocks: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_55cdcc83f559af153c878f57202144eb = L.circleMarker(
+                [51.39, 0.538],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_55cdcc83f559af153c878f57202144eb.bindTooltip(
+                `<div>
+                     <b>Medway NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 97.9<br>Breach impact: -0.0098<br>Shocks: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b6e2ad29a7f4bdcbd32a3d94db4638cb = L.circleMarker(
+                [51.069, -1.795],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_b6e2ad29a7f4bdcbd32a3d94db4638cb.bindTooltip(
+                `<div>
+                     <b>Salisbury NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 95.7<br>Breach impact: -0.0069<br>Shocks: 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4dac02e3e27075a516e3fb70b249316 = L.circleMarker(
+                [52.594, -2.107],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_f4dac02e3e27075a516e3fb70b249316.bindTooltip(
+                `<div>
+                     <b>The Royal Wolverhampton NHS Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 95.0<br>Breach impact: -0.0061<br>Shocks: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7d121c7b19b4a82e4e37ac98e86da35c = L.circleMarker(
+                [54.984, -1.605],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_7d121c7b19b4a82e4e37ac98e86da35c.bindTooltip(
+                `<div>
+                     <b>The Newcastle Upon Tyne Hospitals NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 92.9<br>Breach impact: -0.0044<br>Shocks: 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f484f980ff7c6ba00f92824c56bf638c = L.circleMarker(
+                [54.573, -1.295],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_f484f980ff7c6ba00f92824c56bf638c.bindTooltip(
+                `<div>
+                     <b>North Tees And Hartlepool NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 92.1<br>Breach impact: -0.0024<br>Shocks: 11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3a3a7025cfcae7b5deb31ec896cf0dac = L.circleMarker(
+                [53.814, -1.522],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_3a3a7025cfcae7b5deb31ec896cf0dac.bindTooltip(
+                `<div>
+                     <b>Leeds Teaching Hospitals NHS Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 91.4<br>Breach impact: -0.0020<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6573a9992d619d2b93fdc010588d43ec = L.circleMarker(
+                [52.395, -1.528],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_6573a9992d619d2b93fdc010588d43ec.bindTooltip(
+                `<div>
+                     <b>University Hospitals Coventry And Warwickshire NHS Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 90.7<br>Breach impact: -0.0016<br>Shocks: 19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b126d4f7016d9766140f021a570a209 = L.circleMarker(
+                [51.506, -2.587],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_2b126d4f7016d9766140f021a570a209.bindTooltip(
+                `<div>
+                     <b>North Bristol NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 90.0<br>Breach impact: -0.0011<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1c18c0ac9cc4709837b3401032135386 = L.circleMarker(
+                [51.736, 0.47],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_1c18c0ac9cc4709837b3401032135386.bindTooltip(
+                `<div>
+                     <b>Mid Essex Hospital Services NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 89.3<br>Breach impact: -0.0011<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e717ddffe3bcb3c0fd2e06af488c0084 = L.circleMarker(
+                [53.79, -2.244],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_e717ddffe3bcb3c0fd2e06af488c0084.bindTooltip(
+                `<div>
+                     <b>East Lancashire Hospitals NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 87.9<br>Breach impact: -0.0006<br>Shocks: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bd48cb314394ee0d1e7ea7515eaf5816 = L.circleMarker(
+                [51.43, 0.274],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_bd48cb314394ee0d1e7ea7515eaf5816.bindTooltip(
+                `<div>
+                     <b>Dartford And Gravesham NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 87.1<br>Breach impact: -0.0006<br>Shocks: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_044963acf4af002afbcf75905378a6d4 = L.circleMarker(
+                [50.72, -1.977],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_044963acf4af002afbcf75905378a6d4.bindTooltip(
+                `<div>
+                     <b>Poole Hospital NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 86.4<br>Breach impact: 0.0001<br>Shocks: 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2b8791610d734d5c5c3f75324fb80754 = L.circleMarker(
+                [51.566, -1.791],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_2b8791610d734d5c5c3f75324fb80754.bindTooltip(
+                `<div>
+                     <b>Great Western Hospitals NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 85.7<br>Breach impact: 0.0007<br>Shocks: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ac5a3e6d701addad5ba3f1e1c7bff5ef = L.circleMarker(
+                [53.57, -2.14],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_ac5a3e6d701addad5ba3f1e1c7bff5ef.bindTooltip(
+                `<div>
+                     <b>Pennine Acute Hospitals NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 85.0<br>Breach impact: 0.0010<br>Shocks: 18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_63bbd408440f7b6439678a2aa67d480b = L.circleMarker(
+                [51.759, -1.218],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_63bbd408440f7b6439678a2aa67d480b.bindTooltip(
+                `<div>
+                     <b>Oxford Health NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 83.6<br>Breach impact: 0.0021<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0ff32f3b9771ce153353da024fb60b0 = L.circleMarker(
+                [53.554, -1.455],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_f0ff32f3b9771ce153353da024fb60b0.bindTooltip(
+                `<div>
+                     <b>Barnsley Hospital NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 82.9<br>Breach impact: 0.0021<br>Shocks: 17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bdf5c3db1d653bdcd32704b37fe859be = L.circleMarker(
+                [53.366, -2.696],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_bdf5c3db1d653bdcd32704b37fe859be.bindTooltip(
+                `<div>
+                     <b>Bridgewater Community Healthcare NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 82.1<br>Breach impact: 0.0022<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b919d554cbac70957d38e3a61e19c22c = L.circleMarker(
+                [52.927, -1.498],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_b919d554cbac70957d38e3a61e19c22c.bindTooltip(
+                `<div>
+                     <b>Derbyshire Community Health Services NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 81.4<br>Breach impact: 0.0023<br>Shocks: 16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_79e09078d3040d95970caee0f8d59cec = L.circleMarker(
+                [52.584, -2.005],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_79e09078d3040d95970caee0f8d59cec.bindTooltip(
+                `<div>
+                     <b>Walsall Healthcare NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 80.7<br>Breach impact: 0.0024<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_df49d546f57035a77c51db4dbf9f4a4f = L.circleMarker(
+                [53.885, -1.963],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_df49d546f57035a77c51db4dbf9f4a4f.bindTooltip(
+                `<div>
+                     <b>Airedale NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 80.0<br>Breach impact: 0.0028<br>Shocks: 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ce04a2b52080b30bab8383e0c074d7d7 = L.circleMarker(
+                [52.771, -1.203],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_ce04a2b52080b30bab8383e0c074d7d7.bindTooltip(
+                `<div>
+                     <b>Loughborough Urgent Care Centre</b><br>Cluster: <b>moderate</b><br>Resilience score: 79.3<br>Breach impact: 0.0029<br>Shocks: 17
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f5609004c5b78cdd0ef17d5823ff9cfc = L.circleMarker(
+                [51.541, -2.412],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_f5609004c5b78cdd0ef17d5823ff9cfc.bindTooltip(
+                `<div>
+                     <b>Yate West Gate Centre</b><br>Cluster: <b>resilient</b><br>Resilience score: 78.6<br>Breach impact: 0.0031<br>Shocks: 15
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7f674512cf967b8da728da0519af1612 = L.circleMarker(
+                [53.806, -0.316],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_7f674512cf967b8da728da0519af1612.bindTooltip(
+                `<div>
+                     <b>Bransholme Health Centre</b><br>Cluster: <b>resilient</b><br>Resilience score: 77.9<br>Breach impact: 0.0035<br>Shocks: 19
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2c50b8883ca6ffa7f77d710dadb3f5f1 = L.circleMarker(
+                [50.929, -1.434],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_2c50b8883ca6ffa7f77d710dadb3f5f1.bindTooltip(
+                `<div>
+                     <b>University Hospital Southampton NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 77.1<br>Breach impact: 0.0036<br>Shocks: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_74df11264661558397d77c48eeb6ecb4 = L.circleMarker(
+                [51.812, -0.362],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_74df11264661558397d77c48eeb6ecb4.bindTooltip(
+                `<div>
+                     <b>Hertfordshire Community NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 75.7<br>Breach impact: 0.0043<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd7f0576bb065b203d3ef4dcbb4839e6 = L.circleMarker(
+                [51.536, 0.005],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_fd7f0576bb065b203d3ef4dcbb4839e6.bindTooltip(
+                `<div>
+                     <b>North East London NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 75.0<br>Breach impact: 0.0045<br>Shocks: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f55429b1ec28a6c44cacc39dfb4e9143 = L.circleMarker(
+                [51.099, -0.056],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_f55429b1ec28a6c44cacc39dfb4e9143.bindTooltip(
+                `<div>
+                     <b>Queen Victoria Hospital NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 74.3<br>Breach impact: 0.0046<br>Shocks: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9e5fffe8c5a0e93101cb1129a9f3a000 = L.circleMarker(
+                [51.788, 0.088],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_9e5fffe8c5a0e93101cb1129a9f3a000.bindTooltip(
+                `<div>
+                     <b>The Princess Alexandra Hospital NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 72.9<br>Breach impact: 0.0049<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_88f5cecf0f4f120b86c19143f69ea176 = L.circleMarker(
+                [50.72, -1.993],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_88f5cecf0f4f120b86c19143f69ea176.bindTooltip(
+                `<div>
+                     <b>St Mary's NHS Treatment Centre</b><br>Cluster: <b>moderate</b><br>Resilience score: 72.1<br>Breach impact: 0.0051<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ed096274b9e5e4b50b7139258c16e0c6 = L.circleMarker(
+                [55.082, -1.589],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_ed096274b9e5e4b50b7139258c16e0c6.bindTooltip(
+                `<div>
+                     <b>Northumbria Healthcare NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 70.7<br>Breach impact: 0.0053<br>Shocks: 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8bf0a136e1ddd20f6982b6c6745d9742 = L.circleMarker(
+                [50.726, -3.513],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_8bf0a136e1ddd20f6982b6c6745d9742.bindTooltip(
+                `<div>
+                     <b>Royal Devon And Exeter NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 70.0<br>Breach impact: 0.0057<br>Shocks: 18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e2dae1db44f203c3e954b2c72b847f2c = L.circleMarker(
+                [51.467, -0.364],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_e2dae1db44f203c3e954b2c72b847f2c.bindTooltip(
+                `<div>
+                     <b>Hounslow And Richmond Community Healthcare NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 69.3<br>Breach impact: 0.0061<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a4559b9c124fc4333a98d0cc8186fd9e = L.circleMarker(
+                [52.189, -2.218],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_a4559b9c124fc4333a98d0cc8186fd9e.bindTooltip(
+                `<div>
+                     <b>Worcestershire Acute Hospitals NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 68.6<br>Breach impact: 0.0063<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f11741606c4a1599d4b95195033ba46c = L.circleMarker(
+                [51.785, 1.153],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_f11741606c4a1599d4b95195033ba46c.bindTooltip(
+                `<div>
+                     <b>Clacton Hospital</b><br>Cluster: <b>moderate</b><br>Resilience score: 67.9<br>Breach impact: 0.0063<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44ba8523dad6052daa0428661633ac9a = L.circleMarker(
+                [51.109, 1.17],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_44ba8523dad6052daa0428661633ac9a.bindTooltip(
+                `<div>
+                     <b>East Kent Hospitals University NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 67.1<br>Breach impact: 0.0066<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4dc3bb4c552be832e293d6fa6460d897 = L.circleMarker(
+                [52.987, -2.13],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_4dc3bb4c552be832e293d6fa6460d897.bindTooltip(
+                `<div>
+                     <b>University Hospitals Of North Midlands NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 66.4<br>Breach impact: 0.0066<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_96158904bf718388df1cbba4acbe41a9 = L.circleMarker(
+                [54.07, -2.809],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_96158904bf718388df1cbba4acbe41a9.bindTooltip(
+                `<div>
+                     <b>University Hospitals Of Morecambe Bay NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 65.0<br>Breach impact: 0.0070<br>Shocks: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_69c5dbd11bf180d0c8124a5994b82af5 = L.circleMarker(
+                [51.02, -3.05],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_69c5dbd11bf180d0c8124a5994b82af5.bindTooltip(
+                `<div>
+                     <b>Somerset Partnership NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 64.3<br>Breach impact: 0.0070<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5bb3a2abe43f9811bc68a2d3a9ef510c = L.circleMarker(
+                [51.545, -0.052],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_5bb3a2abe43f9811bc68a2d3a9ef510c.bindTooltip(
+                `<div>
+                     <b>Homerton University Hospital NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 62.1<br>Breach impact: 0.0071<br>Shocks: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7abe878af2c584180e5d3498f037a0a = L.circleMarker(
+                [50.837, -0.157],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_e7abe878af2c584180e5d3498f037a0a.bindTooltip(
+                `<div>
+                     <b>Brighton And Sussex University Hospitals NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 60.7<br>Breach impact: 0.0072<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_5024b7bdd0db183448ce81239ef86665 = L.circleMarker(
+                [51.887, -0.437],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_5024b7bdd0db183448ce81239ef86665.bindTooltip(
+                `<div>
+                     <b>Luton And Dunstable University Hospital NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 57.9<br>Breach impact: 0.0074<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1a03c086fda92e5b72d459c568ccfa94 = L.circleMarker(
+                [54.893, -1.382],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_1a03c086fda92e5b72d459c568ccfa94.bindTooltip(
+                `<div>
+                     <b>City Hospitals Sunderland NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 56.4<br>Breach impact: 0.0078<br>Shocks: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f49b90b06c9b922ed89c3a19c5a26357 = L.circleMarker(
+                [50.87, -0.18],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_f49b90b06c9b922ed89c3a19c5a26357.bindTooltip(
+                `<div>
+                     <b>Sussex Community NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 55.7<br>Breach impact: 0.0080<br>Shocks: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47e3aef9e0d60385c95677a0278298b4 = L.circleMarker(
+                [51.703, -0.351],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_47e3aef9e0d60385c95677a0278298b4.bindTooltip(
+                `<div>
+                     <b>West Hertfordshire Hospitals NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 52.1<br>Breach impact: 0.0082<br>Shocks: 11
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7cc1b228c5391dbd4cd906a18ac412c7 = L.circleMarker(
+                [54.894, -2.944],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_7cc1b228c5391dbd4cd906a18ac412c7.bindTooltip(
+                `<div>
+                     <b>North Cumbria University Hospitals NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 51.4<br>Breach impact: 0.0083<br>Shocks: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a3c20df3d3c10512556b9924181eb8d4 = L.circleMarker(
+                [53.397, -2.969],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_a3c20df3d3c10512556b9924181eb8d4.bindTooltip(
+                `<div>
+                     <b>Liverpool Women's NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 50.7<br>Breach impact: 0.0084<br>Shocks: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3a4ebee1b8bc1b02f7f68ce1858ac61e = L.circleMarker(
+                [50.373, -4.138],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_3a4ebee1b8bc1b02f7f68ce1858ac61e.bindTooltip(
+                `<div>
+                     <b>Plymouth Hospitals NHS Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 50.0<br>Breach impact: 0.0085<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea5acc90fc36f7655934b1f815696472 = L.circleMarker(
+                [50.949, -2.64],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_ea5acc90fc36f7655934b1f815696472.bindTooltip(
+                `<div>
+                     <b>Yeovil District Hospital NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 49.3<br>Breach impact: 0.0086<br>Shocks: 18
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_36c52c8377d61bf0eaeeff01e5ae855c = L.circleMarker(
+                [51.464, -0.013],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_36c52c8377d61bf0eaeeff01e5ae855c.bindTooltip(
+                `<div>
+                     <b>Lewisham And Greenwich NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 47.9<br>Breach impact: 0.0088<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e78db983c3a6d4e4e2496fdd68147358 = L.circleMarker(
+                [51.375, -0.103],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_e78db983c3a6d4e4e2496fdd68147358.bindTooltip(
+                `<div>
+                     <b>Croydon Health Services NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 47.1<br>Breach impact: 0.0093<br>Shocks: 22
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b7dc4cec14127792cae2b619ddbeed0f = L.circleMarker(
+                [53.818, -3.058],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_b7dc4cec14127792cae2b619ddbeed0f.bindTooltip(
+                `<div>
+                     <b>Blackpool Teaching Hospitals NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 46.4<br>Breach impact: 0.0094<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_cb2d4fbdef1d00a9d5d6d77127b47c73 = L.circleMarker(
+                [53.38, -1.49],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_cb2d4fbdef1d00a9d5d6d77127b47c73.bindTooltip(
+                `<div>
+                     <b>Sheffield Children's NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 45.0<br>Breach impact: 0.0097<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1edab0c9dd9056c3e633ebb6ab9256ad = L.circleMarker(
+                [51.553, -0.165],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_1edab0c9dd9056c3e633ebb6ab9256ad.bindTooltip(
+                `<div>
+                     <b>Royal Free London NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 44.3<br>Breach impact: 0.0097<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d670f74131bbe042ddbe6be295a451c6 = L.circleMarker(
+                [51.062, -1.302],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_d670f74131bbe042ddbe6be295a451c6.bindTooltip(
+                `<div>
+                     <b>Hampshire Hospitals NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 42.9<br>Breach impact: 0.0102<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_492f20040a16c687b1adf3eae758ddd1 = L.circleMarker(
+                [51.411, -0.287],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_492f20040a16c687b1adf3eae758ddd1.bindTooltip(
+                `<div>
+                     <b>Kingston Hospital NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 42.1<br>Breach impact: 0.0104<br>Shocks: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_c34a54a873dee446a515414c805bc5c8 = L.circleMarker(
+                [51.499, -0.118],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_c34a54a873dee446a515414c805bc5c8.bindTooltip(
+                `<div>
+                     <b>Guy's And St Thomas' NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 40.0<br>Breach impact: 0.0116<br>Shocks: 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6e75c6956b5d04737d8be2f6bb27dee4 = L.circleMarker(
+                [52.712, -2.459],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_6e75c6956b5d04737d8be2f6bb27dee4.bindTooltip(
+                `<div>
+                     <b>Shrewsbury And Telford Hospital NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 39.3<br>Breach impact: 0.0117<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_72aaaf63360c6ba2029344a3429e43a3 = L.circleMarker(
+                [53.228, -0.542],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_72aaaf63360c6ba2029344a3429e43a3.bindTooltip(
+                `<div>
+                     <b>United Lincolnshire Hospitals NHS Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 38.6<br>Breach impact: 0.0117<br>Shocks: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7720c6b398a4d214202674572cc683b4 = L.circleMarker(
+                [52.131, -0.472],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_7720c6b398a4d214202674572cc683b4.bindTooltip(
+                `<div>
+                     <b>Bedford Hospital NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 37.1<br>Breach impact: 0.0124<br>Shocks: 14
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0985193dd8db597b12b7dcd1b757f79c = L.circleMarker(
+                [51.17, -0.148],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_0985193dd8db597b12b7dcd1b757f79c.bindTooltip(
+                `<div>
+                     <b>Surrey And Sussex Healthcare NHS Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 36.4<br>Breach impact: 0.0125<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d6a1e24bf7eacfc4013dd2731b7ed8a4 = L.circleMarker(
+                [52.951, -1.148],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_d6a1e24bf7eacfc4013dd2731b7ed8a4.bindTooltip(
+                `<div>
+                     <b>Nottingham Citycare Partnership</b><br>Cluster: <b>moderate</b><br>Resilience score: 35.7<br>Breach impact: 0.0127<br>Shocks: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_366cc0355bcc4de44bf549e2b8ea6960 = L.circleMarker(
+                [53.77, -2.69],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#E08B2C", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_366cc0355bcc4de44bf549e2b8ea6960.bindTooltip(
+                `<div>
+                     <b>Lancashire Teaching Hospitals NHS Foundation Trust</b><br>Cluster: <b>moderate</b><br>Resilience score: 33.6<br>Breach impact: 0.0131<br>Shocks: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fcb1673d26c624552491da3796c66d05 = L.circleMarker(
+                [51.526, -0.133],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_fcb1673d26c624552491da3796c66d05.bindTooltip(
+                `<div>
+                     <b>University College London Hospitals NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 32.9<br>Breach impact: 0.0145<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b1c2a703c5a7d90280001151570a6500 = L.circleMarker(
+                [54.953, -1.644],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_b1c2a703c5a7d90280001151570a6500.bindTooltip(
+                `<div>
+                     <b>Gateshead Health NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 32.1<br>Breach impact: 0.0150<br>Shocks: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b190248dc965e146a6e8e191f490c4af = L.circleMarker(
+                [53.362, -3.07],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_b190248dc965e146a6e8e191f490c4af.bindTooltip(
+                `<div>
+                     <b>Wirral University Teaching Hospital NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 31.4<br>Breach impact: 0.0153<br>Shocks: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3c39a849bc1bbf2987f71f40cffde575 = L.circleMarker(
+                [51.455, -0.979],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_3c39a849bc1bbf2987f71f40cffde575.bindTooltip(
+                `<div>
+                     <b>Royal Berkshire NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 30.0<br>Breach impact: 0.0154<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_389d953827171c44ff475cb0ba6905d1 = L.circleMarker(
+                [51.461, -2.603],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_389d953827171c44ff475cb0ba6905d1.bindTooltip(
+                `<div>
+                     <b>University Hospitals Bristol NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 28.6<br>Breach impact: 0.0161<br>Shocks: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_92ade9f1df2610f6ebbf8b464cdd58fa = L.circleMarker(
+                [51.607, -0.072],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_92ade9f1df2610f6ebbf8b464cdd58fa.bindTooltip(
+                `<div>
+                     <b>North Middlesex University Hospital NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 27.9<br>Breach impact: 0.0161<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0a48c1ceef4903704d52cafb79c2604f = L.circleMarker(
+                [50.154, -5.072],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_0a48c1ceef4903704d52cafb79c2604f.bindTooltip(
+                `<div>
+                     <b>Royal Cornwall Hospitals NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 27.1<br>Breach impact: 0.0162<br>Shocks: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_18f1047968f22c11a21a37ad60bba7fd = L.circleMarker(
+                [53.088, -1.098],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_18f1047968f22c11a21a37ad60bba7fd.bindTooltip(
+                `<div>
+                     <b>Sherwood Forest Hospitals NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 25.7<br>Breach impact: 0.0165<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fd91dc30094fb2eaf4635f000bb01e31 = L.circleMarker(
+                [52.518, -1.442],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_fd91dc30094fb2eaf4635f000bb01e31.bindTooltip(
+                `<div>
+                     <b>George Eliot Hospital NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 25.0<br>Breach impact: 0.0166<br>Shocks: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2fb2011b8998ae09b6111ebf5a1bb72b = L.circleMarker(
+                [51.759, -1.218],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_2fb2011b8998ae09b6111ebf5a1bb72b.bindTooltip(
+                `<div>
+                     <b>Oxford University Hospitals NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 24.3<br>Breach impact: 0.0168<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_08348d89722a82d2c3960c067942e10f = L.circleMarker(
+                [51.686, -0.782],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_08348d89722a82d2c3960c067942e10f.bindTooltip(
+                `<div>
+                     <b>Buckinghamshire Healthcare NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 23.6<br>Breach impact: 0.0174<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb804bd173d26e6bebb8d73432e20a78 = L.circleMarker(
+                [51.28, 0.528],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_eb804bd173d26e6bebb8d73432e20a78.bindTooltip(
+                `<div>
+                     <b>Maidstone And Tunbridge Wells NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 22.9<br>Breach impact: 0.0175<br>Shocks: 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e82d30ff3e10dd29c63b13f940955c10 = L.circleMarker(
+                [53.696, -1.558],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_e82d30ff3e10dd29c63b13f940955c10.bindTooltip(
+                `<div>
+                     <b>Mid Yorkshire Hospitals NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 22.1<br>Breach impact: 0.0178<br>Shocks: 3
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a5f20454f85b783015da16b6af4f9bfe = L.circleMarker(
+                [52.244, 0.716],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_a5f20454f85b783015da16b6af4f9bfe.bindTooltip(
+                `<div>
+                     <b>West Suffolk NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 20.7<br>Breach impact: 0.0182<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0274a8847a6de7bdafe895b5e1d0b380 = L.circleMarker(
+                [53.43, -1.356],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2166AC", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_0274a8847a6de7bdafe895b5e1d0b380.bindTooltip(
+                `<div>
+                     <b>The Rotherham NHS Foundation Trust</b><br>Cluster: <b>resilient</b><br>Resilience score: 20.0<br>Breach impact: 0.0184<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_8e77de86bf201d9a4ebbc307bce75247 = L.circleMarker(
+                [52.618, -1.127],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_8e77de86bf201d9a4ebbc307bce75247.bindTooltip(
+                `<div>
+                     <b>University Hospitals Of Leicester NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 19.3<br>Breach impact: 0.0186<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7fbe646a781ec1e4ad223123e188994a = L.circleMarker(
+                [53.566, -2.431],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_7fbe646a781ec1e4ad223123e188994a.bindTooltip(
+                `<div>
+                     <b>Bolton NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 18.6<br>Breach impact: 0.0187<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a647bdac21f6bfa3164f67522dcd57fa = L.circleMarker(
+                [51.361, -0.265],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_a647bdac21f6bfa3164f67522dcd57fa.bindTooltip(
+                `<div>
+                     <b>Epsom And St Helier University Hospitals NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 17.9<br>Breach impact: 0.0188<br>Shocks: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_1feb2176ae34cb14036bf9371086821f = L.circleMarker(
+                [52.281, -1.58],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_1feb2176ae34cb14036bf9371086821f.bindTooltip(
+                `<div>
+                     <b>South Warwickshire NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 17.1<br>Breach impact: 0.0194<br>Shocks: 13
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_4b7d7d44c2d53c48e7478b5c3a243a49 = L.circleMarker(
+                [50.835, -1.068],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_4b7d7d44c2d53c48e7478b5c3a243a49.bindTooltip(
+                `<div>
+                     <b>Portsmouth Hospitals NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 16.4<br>Breach impact: 0.0205<br>Shocks: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6fa14426d0247ea434e3217c9bcf5148 = L.circleMarker(
+                [51.848, -2.221],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_6fa14426d0247ea434e3217c9bcf5148.bindTooltip(
+                `<div>
+                     <b>Gloucestershire Hospitals NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 15.7<br>Breach impact: 0.0207<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d0cda816fc62b8ac7799591b1d1671c5 = L.circleMarker(
+                [52.758, 0.399],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_d0cda816fc62b8ac7799591b1d1671c5.bindTooltip(
+                `<div>
+                     <b>The Queen Elizabeth Hospital, King's Lynn, NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 15.0<br>Breach impact: 0.0208<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_fbc8458fe44b16f4274dea9c13fdc1a0 = L.circleMarker(
+                [52.584, 1.731],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_fbc8458fe44b16f4274dea9c13fdc1a0.bindTooltip(
+                `<div>
+                     <b>James Paget University Hospitals NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 14.3<br>Breach impact: 0.0209<br>Shocks: 4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6888f5e7f558ba634863854b5037ba03 = L.circleMarker(
+                [53.137, -2.531],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_6888f5e7f558ba634863854b5037ba03.bindTooltip(
+                `<div>
+                     <b>Mid Cheshire Hospitals NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 13.6<br>Breach impact: 0.0211<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6064007aaca6403d732a0bf84656fe61 = L.circleMarker(
+                [53.413, -2.899],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_6064007aaca6403d732a0bf84656fe61.bindTooltip(
+                `<div>
+                     <b>Alder Hey Children's NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 12.9<br>Breach impact: 0.0213<br>Shocks: 7
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_22241ddd890941f8eb94f42bba22887c = L.circleMarker(
+                [52.253, -0.9],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_22241ddd890941f8eb94f42bba22887c.bindTooltip(
+                `<div>
+                     <b>Northampton General Hospital NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 12.1<br>Breach impact: 0.0214<br>Shocks: 16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bee96b0f8eb1642fc25bbfc50ea754fd = L.circleMarker(
+                [51.56, 0.183],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_bee96b0f8eb1642fc25bbfc50ea754fd.bindTooltip(
+                `<div>
+                     <b>Barking, Havering And Redbridge University Hospitals NHS Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 10.0<br>Breach impact: 0.0227<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_78c275f5e9afbe85bc5806035d7becc2 = L.circleMarker(
+                [53.522, -1.12],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_78c275f5e9afbe85bc5806035d7becc2.bindTooltip(
+                `<div>
+                     <b>Doncaster And Bassetlaw Teaching Hospitals NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 9.3<br>Breach impact: 0.0228<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7818ee523845e3d57385161f37b92513 = L.circleMarker(
+                [50.741, -1.835],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_7818ee523845e3d57385161f37b92513.bindTooltip(
+                `<div>
+                     <b>The Royal Bournemouth And Christchurch Hospitals NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 8.6<br>Breach impact: 0.0230<br>Shocks: 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_178ed3d1af9cc5c64446d86369dc68a9 = L.circleMarker(
+                [51.394, -2.37],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_178ed3d1af9cc5c64446d86369dc68a9.bindTooltip(
+                `<div>
+                     <b>Royal United Hospitals Bath NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 7.9<br>Breach impact: 0.0235<br>Shocks: 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_aec0ed22387321a2c9facb2276a9badf = L.circleMarker(
+                [53.96, -1.085],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_aec0ed22387321a2c9facb2276a9badf.bindTooltip(
+                `<div>
+                     <b>York Teaching Hospital NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 7.1<br>Breach impact: 0.0246<br>Shocks: 9
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_eb1071bdcfa26d9672906a5b741239af = L.circleMarker(
+                [50.479, -3.53],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_eb1071bdcfa26d9672906a5b741239af.bindTooltip(
+                `<div>
+                     <b>Torbay And South Devon NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 6.4<br>Breach impact: 0.0263<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d5eb6cd61fd99bfa3afc7c33acaa7b50 = L.circleMarker(
+                [51.224, -0.562],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_d5eb6cd61fd99bfa3afc7c33acaa7b50.bindTooltip(
+                `<div>
+                     <b>Royal Surrey County Hospital NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 5.7<br>Breach impact: 0.0266<br>Shocks: 8
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_98bda73e489902f3e8606139b6990b85 = L.circleMarker(
+                [52.026, -0.757],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_98bda73e489902f3e8606139b6990b85.bindTooltip(
+                `<div>
+                     <b>Milton Keynes University Hospital NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 5.0<br>Breach impact: 0.0272<br>Shocks: 6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f7f40970770d7a31c4cfd10e0a55e61c = L.circleMarker(
+                [51.017, -3.113],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_f7f40970770d7a31c4cfd10e0a55e61c.bindTooltip(
+                `<div>
+                     <b>Taunton And Somerset NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 3.6<br>Breach impact: 0.0296<br>Shocks: 10
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_bda4798a42379d616a2fb2d522fc2036 = L.circleMarker(
+                [53.544, -2.634],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_bda4798a42379d616a2fb2d522fc2036.bindTooltip(
+                `<div>
+                     <b>Wrightington, Wigan And Leigh NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 2.9<br>Breach impact: 0.0368<br>Shocks: 5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3aff62ab1a56c58f561224f01dd6bf07 = L.circleMarker(
+                [52.62, 1.291],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_3aff62ab1a56c58f561224f01dd6bf07.bindTooltip(
+                `<div>
+                     <b>Norfolk And Norwich University Hospitals NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 1.4<br>Breach impact: 0.0384<br>Shocks: 12
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f0d46dba81b412f9c813c2434e483ddf = L.circleMarker(
+                [53.232, -1.426],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#D6404E", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 1}
+            ).addTo(map_451cbecda02aabb535b8ab4a618f2e5c);
+        
+    
+            circle_marker_f0d46dba81b412f9c813c2434e483ddf.bindTooltip(
+                `<div>
+                     <b>Chesterfield Royal Hospital NHS Foundation Trust</b><br>Cluster: <b>fragile</b><br>Resilience score: 0.7<br>Breach impact: 0.0450<br>Shocks: 16
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
